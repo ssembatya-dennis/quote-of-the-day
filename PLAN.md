@@ -39,3 +39,40 @@ At its core, the MVP will deliver a seamless experience that allows users to vie
 - **Search Functionality**: A search bar to quickly find quotes by keyword or author name.
 
 The MVP ensures that the essential goal—delivering inspiration with minimal friction—is achieved first, while leaving space for richer personalization and interactivity in future iterations.
+
+---
+
+## 3. Data Structure
+
+The quotes will be stored in a simple and flexible data structure that can be easily managed within JavaScript.  
+For the MVP, an **array of objects** is the most suitable choice because it:
+
+- Allows us to store multiple quotes in a single collection.
+- Provides an intuitive way to represent each quote with its text and author.
+- Can be easily extended in the future to include additional properties such as category, tags, or source.
+- Works seamlessly with JavaScript methods for random selection, searching, and filtering.
+
+### Example Structure
+
+```javascript
+const quotes = [
+  {
+    id: 1,
+    text: "The best way to get started is to quit talking and begin doing.",
+    author: "Walt Disney",
+    category: "Motivation",
+  },
+  {
+    id: 2,
+    text: "In the middle of every difficulty lies opportunity.",
+    author: "Albert Einstein",
+    category: "Inspiration",
+  },
+  {
+    id: 3,
+    text: "Happiness is not something ready-made. It comes from your own actions.",
+    author: "Dalai Lama",
+    category: "Happiness",
+  },
+];
+```
