@@ -159,3 +159,40 @@ The "Quote of the Day" app will adopt a **minimalist and inspirational look and 
 - Optional dark/light theme support in future versions.
 
 This theming approach ensures that the application feels **inviting, motivational, and easy to use**, while leaving room for personalization through future theme options.
+
+---
+
+## 6. Future Ideas (Scale & Configurability)
+
+While the MVP focuses on delivering a simple, polished experience with random quotes, the application has room to grow into a richer, configurable platform that caters to diverse user needs.
+
+### Potential Enhancements
+
+- **Themes & Personalization**
+
+  - Allow users to switch between multiple themes (e.g., light, dark, nature-inspired palettes).
+  - Font customization options for improved readability.
+  - User-specific preferences stored locally or in the cloud.
+
+- **Quote Categories & Filters**
+
+  - Organize quotes into categories such as Motivation, Happiness, Success, or Wisdom.
+  - Provide filters or dropdowns to browse quotes by mood, theme, or author.
+
+- **Search Functionality**
+
+  - Keyword-based search to quickly find relevant quotes.
+  - Autocomplete suggestions to improve discoverability.
+
+- **Sharing & Engagement**
+
+  - Social sharing buttons to post quotes on platforms like Twitter, Instagram, or LinkedIn.
+  - Download feature to save quotes as styled images or text snippets.
+  - Option for users to "like" or bookmark favorite quotes.
+
+- **Scalability & Integrations**
+  - Integration with external quote APIs or databases to expand the library.
+
+### Long-Term Vision
+
+The long-term goal is to evolve the app from a simple quote viewer into a **personal inspiration hub**—a platform where users not only consume uplifting content but also engage with it, share it, and make it part of their daily routine.
