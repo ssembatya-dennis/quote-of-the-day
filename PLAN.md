@@ -21,21 +21,17 @@ Therefore this project aims to provide a simple yet powerful platform that deliv
 
 ## 2. Core Features (MVP)
 
-The "Quote of the Day" web application focuses on simplicity and inspiration.  
-At its core, the MVP will deliver a seamless experience that allows users to view and interact with inspiring quotes in a minimal, polished interface.
-
 ### Must-Have Features
 
-- **Quote Banner**: A prominent section of the page displays an inspiring quote along with its author.
-- **Random Quote on Page Load**: Each time the page is refreshed, a randomly selected quote is displayed as the "Quote of the Day."
-- **New Quote Button**: Users can click a button to instantly fetch and display a new, randomly selected quote.
+- The application must have a feature that displays the **"Quote of the day"** text and the aurthor clearly and neatly for the user easily and comfortably read the text without straining.
+- The application must have a way to easily switch to the next quote or come back to the previous quote because different users have different tastes and preferences.
 
 ### Nice-to-Have Features (Future Enhancements)
 
-- **Download Quote**: An option to download the current quote (e.g., as an image or text file) for personal use or sharing.
-- **Theme Customization**: A settings modal where users can switch between themes (e.g., light/dark mode) for a personalized experience.
-- **Categories & Filters**: Ability to browse quotes by specific categories (e.g., motivation, happiness, success) or filter by author.
-- **Search Functionality**: A search bar to quickly find quotes by keyword or author name.
+- An option to download the current quote (e.g., as an image or text file) for personal use or sharing.
+- A settings modal where users can set personal preferences e.g changing themes between light/dark mode, changing fonts and much more.
+- An ability to display quotes by specific categories (e.g., motivation, happiness, success) or filter by author.
+- A search bar to quickly find quotes by keyword or author name.
 
 The MVP ensures that the essential goal—delivering inspiration with minimal friction—is achieved first, while leaving space for richer personalization and interactivity in future iterations.
 
