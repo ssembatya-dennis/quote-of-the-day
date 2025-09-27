@@ -87,15 +87,11 @@ The design will ensure readability, accessibility, and responsiveness across des
 
 ## 5. Theming & Styling
 
-The "Quote of the Day" app will adopt a **minimalist and inspirational look and feel**, inspired by modern audiobook and lifestyle app designs. The goal is to create a clean interface that puts the quote at the center, while subtle styling reinforces positivity and calmness.
+The "Quote of the Day" app will adopt a **minimalist and inspirational look and feel**, inspired by modern audiobook and lifestyle app design. The goal is to create a clean interface that puts the quote at the center, while subtle styling reinforces positivity and calmness.
 
-### Visual Style
+### Visual Inspiration (modern audiobook and lifestyle app design)
 
-- **Look & Feel**:
-
-  - Minimalist design with focus on typography and whitespace.
-  - Calming, motivational aesthetic to match the uplifting nature of the content.
-  - Rounded edges and soft shadows for a polished, approachable feel.
+![UI/UX Sketch](assets/inspiration.jpg)
 
 - **Color Palette** (inspired by the screenshot):
 
@@ -104,25 +100,6 @@ The "Quote of the Day" app will adopt a **minimalist and inspirational look and 
   - **Text Colors**:
     - White (`#FFFFFF`) for primary text.
     - Light Gray (`#B0B0B0`) for secondary details (author names, UI hints).
-
-- **Typography**:
-
-  - **Primary Font**: Sans-serif typeface (e.g., _Montserrat_, _Poppins_, or _Inter_) for clean and modern readability.
-  - **Quote Text**: Large, bold style for emphasis.
-  - **Author Name**: Smaller, lighter weight, placed just below the quote.
-
-- **UI Elements**:
-  - **Buttons**: Rounded corners with accent color background and white text.
-  - **Modal/Settings**: Semi-transparent overlay with smooth transitions.
-  - **Hover/Active States**: Subtle color shifts or shadows to indicate interactivity.
-
-### Accessibility & Responsiveness
-
-- Ensure high contrast between text and background for readability.
-- Responsive scaling of typography and layout for desktop, tablet, and mobile screens.
-- Optional dark/light theme support in future versions.
-
-This theming approach ensures that the application feels **inviting, motivational, and easy to use**, while leaving room for personalization through future theme options.
 
 ---
 
