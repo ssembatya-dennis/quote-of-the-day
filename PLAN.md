@@ -11,12 +11,11 @@ By documenting the problem, defining the minimum viable product (MVP), and consi
 
 ## 1. Problem Statement
 
-Life presents different moods and challenges each day.  
-Some individuals wake up struggling to find the energy to face the day, while others feel weighed down by personal troubles and pressures. In such moments, a single word of encouragement or an inspiring thought can provide the strength to keep moving forward.
+For someone struggling to get up and face the day or one at a very critical low point in life due to personal pressures and as well facing various challenges in Life, a word of encouragement or a motivational quote might speak life back into this individual and might be a turning point for one to get up and put his/her life back together.
 
-At the same time, those who are experiencing joy, success, and personal victories often seek meaningful ways to share their positivity with friends, loved ones, and communities. A thoughtful quote can serve both as a personal reminder and as a tool to motivate others not to lose hope, reminding them that tomorrow holds new possibilities.
+At the same time, another going through a very joyful and peaceful season in their life and feels the urge to share the joy and happiness with friends and family, an excellent uplifting quote might assist one attach beautiful text on the moment or motivate his loved ones to keep moving forward and attain victory in life as well.
 
-This project aims to provide a simple yet powerful platform that delivers inspiring quotes—whether to uplift someone in a difficult moment or to amplify joy and success stories that inspire others.
+Therefore this project aims to provide a simple yet powerful platform that delivers inspiring quotes—whether to uplift someone in a difficult moment or to amplify joy and success and inspire others.
 
 ---
 
