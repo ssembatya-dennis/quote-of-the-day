@@ -83,37 +83,6 @@ The design will ensure readability, accessibility, and responsiveness across des
 
 ![UI/UX Sketch](assets/UI-design.jpg)
 
-### Key Components
-
-- **Quote Banner**:
-
-  - Large, centered text for the quote.
-  - Author name displayed just below in smaller text.
-  - Adequate whitespace to maintain focus and readability.
-
-- **New Quote Button** & **Previous Quote Button**:
-
-  - Prominently placed in the sides of the quote.
-  - Uses a simple, bold style to encourage interaction.
-  - Provides instant feedback (e.g., animation or subtle transition) when clicked.
-
-- **Optional Actions** (future enhancements):
-  - **Download Button**: Allows users to save the current quote.
-  - **Settings Button**: Opens a modal for theme selection and category filters.
-
-### User Flow
-
-1. **On Page Load**: A random inspiring quote is displayed.
-2. **On Button Click**: A new random quote replaces the current one without reloading the page.
-3. **Future Options**: Users can download quotes, switch themes, or browse by categories.
-
-### Accessibility Considerations
-
-- High contrast between text and background for readability.
-- Large, legible fonts suitable for both desktop and mobile.
-- Buttons and interactive elements designed with clear labels and sufficient touch targets.
-- Support for light/dark mode to reduce eye strain.
-
 ---
 
 ## 5. Theming & Styling
