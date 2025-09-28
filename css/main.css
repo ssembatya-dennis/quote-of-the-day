@@ -14,10 +14,14 @@ html {
 }
 
 body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6;
   box-sizing: border-box;
 }
 
-.header__container {
+.quote__container {
   width: 100%;
   height: 100vh;
   background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
