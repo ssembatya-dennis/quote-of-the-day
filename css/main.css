@@ -34,7 +34,7 @@ body {
 
 .banner__container {
   width: 50%;
-  height: 40rem;
+  min-height: 40rem;
   text-align: center;
   color: #e0e1dd;
   padding: 4rem 2rem;
@@ -60,7 +60,7 @@ body {
 .banner__quote {
   font-size: 3.8rem;
   font-weight: 500;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
   margin-bottom: 2.4rem;
   color: #f0f1ed;
 }
