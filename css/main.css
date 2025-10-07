@@ -21,7 +21,7 @@ body {
   box-sizing: border-box;
 }
 
-.quote__container {
+.quote_container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,8 +32,8 @@ body {
   position: relative;
 }
 
-.banner__container {
-  width: 50%;
+.quote_card {
+  min-width: 50%;
   min-height: 40rem;
   text-align: center;
   color: #e0e1dd;
@@ -49,35 +49,40 @@ body {
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 700;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   margin-bottom: 4rem;
   text-transform: uppercase;
   color: #e0e1dd;
+
+  background: linear-gradient(45deg, #42d392, #647eff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-.banner__quote {
-  font-size: 3.8rem;
+.quote_text {
+  font-size: 3.5rem;
   font-weight: 500;
   letter-spacing: 0.1rem;
   margin-bottom: 2.4rem;
   color: #f0f1ed;
 }
 
-.banner__author {
+.quote_author {
   font-size: 2.4rem;
   font-weight: 300;
   letter-spacing: 0.1rem;
   color: #a3a5a8;
 }
 
-.author_anchor {
+.quote_author--anchor {
   display: block;
   font-size: 2.1rem;
 }
 
-.author_name {
+.quote_author--name {
   display: block;
   font-size: 2.4rem;
 }
