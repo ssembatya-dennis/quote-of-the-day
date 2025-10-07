@@ -44,5 +44,17 @@
 
 - A feature to share the displayed quote on social handles like (Instagram, Twitter, WhatsApp etc.)
 - A feature to download the displayed quote as text or image
-- A feature that can be triggered to open/close a modal window with "user preferences" like (font-size, font-style, theme etc.) to improve visuals or text readability.
-- A feature to display the previous rendered quote
+- A feature that can be triggered to open/close a modal window with "user preferences" like (font-size, font-style, theme etc.) to improve visibility or text readability.
+
+## The Road Map (Implementation)
+
+### UI/UX Sketch
+
+- Previous hand Sketch
+  ![UI design](assets/UI-design.jpg)
+
+- Updated UI/UX design
+  ![Updated UI design](assets/UI-screenshot.png)
+
+- **Changes in the design**: I initially planned to display the "quote_card" component with two buttons in sides (the previous & next button) both with their respective functionality of displaying the next random quote or displaying the previous quote but when I put more thought to it, I realized that is a totally different concept from what this application is targeting to achieve.
+- The "Carousel" Component which I initially planned to go with bases on a concept of a set data structure which in our context displays "quotes and their authors" in a sequential order from top to bottom and gives the User a feeling of scrolling to get to the last quote which for this particular project is not what's required, and it removes the ability for a user to view randomly selected quotes as his now just moving back and front in a sequence of quotes.
