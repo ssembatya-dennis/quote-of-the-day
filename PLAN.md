@@ -156,3 +156,7 @@ State Management: The class can easily manage internal state, like tracking this
 Native Indexing: The primary operation for a "Quote of the Day" app is random selection. Arrays are natively indexed (0,1,2,...), making random selection trivial: Math.floor(Math.random() \* array.length).
 
 Object Iteration Overhead: To randomly select from a nested object (like a map/dictionary), you first have to get an array of all the keys (Object.keys(quotes)), then select a random key, and then access the value. While not difficult, it adds an extra step compared to direct array indexing.
+
+## Future Ideas (Scale & Configurability):
+
+- I think of integrating this web application with an actual "API" later lone rather than relying on a dummy array of quotes on my local server
