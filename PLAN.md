@@ -58,3 +58,101 @@
 
 - **Changes in the design**: I initially planned to display the "quote_card" component with two buttons in sides (the previous & next button) both with their respective functionality of displaying the next random quote or displaying the previous quote but when I put more thought to it, I realized that is a totally different concept from what this application is targeting to achieve.
 - The "Carousel" Component which I initially planned to go with bases on a concept of a set data structure which in our context displays "quotes and their authors" in a sequential order from top to bottom and gives the User a feeling of scrolling to get to the last quote which for this particular project is not what's required, and it removes the ability for a user to view randomly selected quotes as his now just moving back and front in a sequence of quotes.
+
+- **HTML/CSS and JavaScript**: Most of these rules have already been pre-determined by my supervisor and my task is pretty much to work in the constraints set-up for this project.
+
+### Data Structure
+
+- I will store the quotes in a JavaScript array of objects. Each object will represent a single quote and contain its text and author.
+- **Example Structure:**
+
+```js
+const quotesData = [
+  {
+    quote: "The only way to do great work is to love what you do.",
+    author: "Steve Jobs",
+  },
+  {
+    quote: "Strive not to be a success, but rather to be of value.",
+    author: "Albert Einstein",
+  },
+  {
+    quote: "The mind is everything. What you think you become.",
+    author: "Buddha",
+  },
+  // ... more quote objects
+];
+```
+
+- **JavaScript Code Structure (OOP Approach)**
+  I will structure my JavaScript using a Quote Manager Class and a Quote Display Logic section to separate concerns.
+
+1. The Quote Manager Class
+   This class will handle all the data management and business logic, such as selecting a random quote.
+
+```js
+class QuoteManager {
+  constructor(quotes) {
+    // Store the array of quote objects
+    this.quotes = quotes;
+    // Optionally store the last selected index to prevent immediate repetition
+    this.lastIndex = -1;
+  }
+
+  // Method to get a single random quote object
+  getRandomQuote() {}
+}
+```
+
+2. Initialization and Display Logic
+   This section handles the DOM manipulation and the event listeners.
+
+```js
+// const quotesData = [...]
+
+// 2. DOM Element Selectors
+const quoteTextElement = document.querySelector(".quote-text");
+const quoteAuthorElement = document.querySelector(".quote-author");
+const newQuoteButton = document.querySelector(".new-quote-btn");
+
+// 3. Instantiate the QuoteManager
+const manager = new QuoteManager(quotesData);
+
+// 4. Function to display a quote
+function displayNewQuote() {
+  const newQuote = manager.getRandomQuote(); // Get the random quote object
+
+  // Update the DOM elements
+  quoteTextElement.textContent = newQuote.quote;
+  quoteAuthorElement.textContent = `- ${newQuote.author}`;
+}
+
+// 5. Event Listeners and Initial Load
+newQuoteButton.addEventListener("click", displayNewQuote);
+
+// Initial quote display on page load
+displayNewQuote();
+```
+
+#### Why the Array of Objects + OOP Class Structure
+
+1. Superior Data Integrity and Cohesion:
+
+Data Integrity: In a parallel array structure (quotes[i] corresponds to authors[i]), you must maintain two arrays perfectly in sync. If you accidentally add a quote but forget the author, your application will break or show the wrong author.
+
+Cohesion: The object {quote: "...", author: "..."} ensures the quote and its author are cohesive—they are inseparable parts of the same entity. This makes adding, removing, or accessing a complete quote entity atomically safe.
+
+2. Cleaner Logic and Separation of Concerns (SoC):
+
+Encapsulation: The QuoteManager class encapsulates all the business logic (random selection, tracking the last quote) and the data (this.quotes). The main application logic only needs to call manager.getRandomQuote().
+
+Testability: Because the data management logic is isolated in a class, it can be tested independently of the HTML/DOM manipulation. This is essential for robust applications.
+
+State Management: The class can easily manage internal state, like tracking this.lastIndex to prevent immediate quote repetition, which is difficult to do cleanly with simple, separate functions that rely on global variables.
+
+1. Simpler Random Selection
+   Why Arrays are Better than Nested Objects:
+
+Native Indexing: The primary operation for a "Quote of the Day" app is random selection. Arrays are natively indexed (0,1,2,...), making random selection trivial: Math.floor(Math.random() \* array.length).
+
+Object Iteration Overhead: To randomly select from a nested object (like a map/dictionary), you first have to get an array of all the keys (Object.keys(quotes)), then select a random key, and then access the value. While not difficult, it adds an extra step compared to direct array indexing.
