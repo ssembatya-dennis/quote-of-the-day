@@ -1,62 +1,75 @@
+/**
+ * @file QuoteModel.js
+ * @description - The OuoteModel.js recieves a List of Quotes data from a third party API
+ * "Quotable API", runs validations before storing this data, and offers a few methods to the
+ * read and mutate the internal state of this data
+ */
+
+import ValidateQuotesListResponse from "./validations.js";
+/**
+ * @class QuoteModel
+ * @description - The QuoteModel makes fetch requests to the "Quotable API", validates the
+ * response received, stores the data, and offers methods like getCurrentQuote and getNewQuote
+ * to the public API to read and mutate the internal state of the Quotes List data stored.
+ */
 export default class QuoteModel {
+  /**
+   * stores the URL of the Quotable API,
+   * @constructor
+   */
   constructor() {
     this._quotes = [];
     this._currentQuoteIndex = 0;
 
-    // using a public CORS proxy
-    this.PROXY_URL = "https://api.allorigins.win/raw?url=";
-    this.TARGET_URL = "https://zenquotes.io/api/quotes";
-
-    this.API_URL = this.PROXY_URL + encodeURIComponent(this.TARGET_URL);
+    this.API_URL = "https://api.quotable.io/quotes?limit=50";
   }
 
   /**
-   * Attempts to fetch the array of quotes from the ZenQuotes API.
-   * @returns {Promise<boolean>} True if the fetch was successful, false otherwise.
+   *  Attempts to fetch data from a third party API
+   * 1) validates the response data structure
+   * 2) validates the actual quotesList and quote structure and content
+   * 3) stores this valid quotesList data in a private quotes variable
+   * 4) logs to the console a successful error message.
+   * @async
+   * @function fetchQuotes
+   * @returns {boolean} - True if the data fetch call was successful
    */
   async fetchQuotes() {
     try {
-      console.log("Attempting to fetch quotes from API...");
-
-      // 1. Make the GET Request
       const response = await fetch(this.API_URL);
 
-      // 2. Check for Successful HTTP Status (200-299)
-      if (!response.ok) {
+      if (response.ok !== true) {
         throw new Error(`HTTP Error! Status Code: ${response.status}`);
       }
 
-      // 3. Extract the JSON Data
-      const data = await response.json();
+      const quotesList = await response.json();
 
-      // 4. Validate and Store the Data
-      if (Array.isArray(data) && data.length > 0) {
-        this._quotes = data;
-        this._currentQuoteIndex = 0;
+      // validate the API response structure
+      const validQuotesListResponse =
+        ValidateQuotesListResponse.isValidResponse(quotesList);
 
-        console.log(`Successfully fetched ${this._quotes.length} quotes.`);
-
-        return true;
-      } else {
-        throw new Error("API returned an empty or invalid data array.");
+      if (validQuotesListResponse !== true) {
+        return;
       }
+
+      // validate the actual quotes List and quote content data
+      const validQuoteContents =
+        ValidateQuotesListResponse.isValidQuoteList(quotesList);
+
+      if (validQuoteContents !== true) {
+        return;
+      }
+      this._quotes = quotesList.results;
+      this._currentQuoteIndex = 0;
+      console.log(
+        `Successfully fetched and validated ${this._quotes.length} quotes.`
+      );
+      return true;
     } catch (error) {
       console.error("Failed to fetch and process quotes:", error.message);
-      // Optionally load a fallback quote if the fetch fails
-      this._quotes = [
-        {
-          q: "Error loading quotes. Check your connection or API status.",
-          a: "System",
-        },
-      ];
-      return false;
     }
   }
 
-  /**
-   * Gets the current quote object.
-   * @returns {object} The current quote {q: "...", a: "..."}
-   */
   getCurrentQuote() {
     // Ensure there is at least one quote available, even the fallback
     if (this._quotes.length === 0) {
