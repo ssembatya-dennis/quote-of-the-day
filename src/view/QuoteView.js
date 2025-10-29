@@ -4,7 +4,7 @@ export default class QuoteView {
     // Get references to all necessary DOM elements
     // text elements
     this.quoteText = document.querySelector(".quote_text");
-    this.authorText = document.querySelector(".quote_author--name");
+    this.authorText = document.querySelector(".quote_author");
 
     // buttons
     this.newQuoteBtn = document.querySelector(".new_quote_btn");
@@ -15,7 +15,7 @@ export default class QuoteView {
   // Renders quote data to the UI
   renderPageQuote(quoteObject) {
     this.quoteText.textContent = quoteObject.q;
-    this.authorText.textContent = `- ${quoteObject.a}`;
+    this.authorText.textContent = `Author - ${quoteObject.a}`;
   }
 
   // When the button is clicked, execute the handler function passed from the Controller
